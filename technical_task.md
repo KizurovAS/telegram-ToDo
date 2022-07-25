@@ -62,17 +62,17 @@
 При удалении просит подтвердить удаление напоминания. <br>
 При отложении выводит кнопочное меню: 10 минут; 30 минут; 1 час без подтверждения сохранения изменений. </p>
   <p><b> Иконки </b></p>
-    <p> ![Image text](https://github.com/KizurovAS/telegram-ToDo/blob/master/img/home.svg) - домой </p>
-    <a><p> ![Image text](https://github.com/KizurovAS/telegram-ToDo/blob/master/img/help.svg) - справка </p></a>
-    <a><p> ![Image text](https://github.com/KizurovAS/telegram-ToDo/blob/master/img/info.svg) - информация </p></a>
-    <a><p> ![Image text](https://github.com/KizurovAS/telegram-ToDo/blob/master/img/document.svg) - заметки </p></a>
-    <a><p> ![Image text](https://github.com/KizurovAS/telegram-ToDo/blob/master/img/bell.svg) - напоминания </p></a>
-    <a><p> ![Image text](https://github.com/KizurovAS/telegram-ToDo/blob/master/img/cog.svg) - настройки </p></a>
-    <a><p> ![Image text](https://github.com/KizurovAS/telegram-ToDo/blob/master/img/plus-circle.svg) - добавить </p></a>
-    <a><p> ![Image text](https://github.com/KizurovAS/telegram-ToDo/blob/master/img/pencil.svg) - редактировать </p></a>
-    <a><p> ![Image text](https://github.com/KizurovAS/telegram-ToDo/blob/master/img/trash.svg) - удалить </p></a>
-    <a><p> ![Image text](https://github.com/KizurovAS/telegram-ToDo/blob/master/img/check.svg) - да </p></a>
-    <a><p> ![Image text](https://github.com/KizurovAS/telegram-ToDo/blob/master/img/close.svg) - нет </p></a>
+    <a><p> ![Image text](https://github.com/KizurovAS/telegram-ToDo/blob/master/img/home.svg) - домой <br>
+    ![Image text](https://github.com/KizurovAS/telegram-ToDo/blob/master/img/help.svg) - справка <br>
+    ![Image text](https://github.com/KizurovAS/telegram-ToDo/blob/master/img/info.svg) - информация <br>
+    ![Image text](https://github.com/KizurovAS/telegram-ToDo/blob/master/img/document.svg) - заметки <br>
+    ![Image text](https://github.com/KizurovAS/telegram-ToDo/blob/master/img/bell.svg) - напоминания <br>
+    ![Image text](https://github.com/KizurovAS/telegram-ToDo/blob/master/img/cog.svg) - настройки <br>
+    ![Image text](https://github.com/KizurovAS/telegram-ToDo/blob/master/img/plus-circle.svg) - добавить <br>
+    ![Image text](https://github.com/KizurovAS/telegram-ToDo/blob/master/img/pencil.svg) - редактировать <br>
+    ![Image text](https://github.com/KizurovAS/telegram-ToDo/blob/master/img/trash.svg) - удалить <br>
+    ![Image text](https://github.com/KizurovAS/telegram-ToDo/blob/master/img/check.svg) - да <br>
+    ![Image text](https://github.com/KizurovAS/telegram-ToDo/blob/master/img/close.svg) - нет </p></a>
     
   
 
