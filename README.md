@@ -5,7 +5,7 @@
 <p>
 возможности версии лежат по адресу <a href="https://github.com/KizurovAS/telegram-ToDo/blob/master/versions.txt">/versions.txt</a>
 <p>
-mermaid
+```mermaid
   sequenceDiagram
     participant V as Ваня
     participant P as Петя
@@ -20,3 +20,4 @@ mermaid
     loop Каждые полчаса
         V->>I: Сколько времени?
     end
+```
