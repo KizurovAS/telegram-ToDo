@@ -61,18 +61,17 @@
 При удалении просит подтвердить удаление напоминания. <p>
 При отложении выводит кнопочное меню: 10 минут; 30 минут; 1 час без подтверждения сохранения изменений. <p>
     <b> Иконки </b><p>
-    ![Image text](https://github.com/KizurovAS/telegram-ToDo/blob/master/img/home.svg)
-    <a><p> - домой</p></a>
-    <a><p> - справка</p></a>
-    <a><p> - информация</p></a>
-    <a><p> - заметки</p></a>
-    <a><p> - напоминания</p></a>
-    <a><p> - настройки</p></a>
-    <a><p> - добавить</p></a>
-    <a><p> - редактировать</p></a>
-    <a><p> - удалить</p></a>
-    <a><p> - да</p></a>
-    <a><p> - нет</p></a>
+    <a><p>![Image text](https://github.com/KizurovAS/telegram-ToDo/blob/master/img/home.svg) - домой</p></a>
+    <a><p>![Image text](https://github.com/KizurovAS/telegram-ToDo/blob/master/img/help.svg) - справка</p></a>
+    <a><p>![Image text](https://github.com/KizurovAS/telegram-ToDo/blob/master/img/info.svg) - информация</p></a>
+    <a><p>![Image text](https://github.com/KizurovAS/telegram-ToDo/blob/master/img/document.svg) - заметки</p></a>
+    <a><p>![Image text](https://github.com/KizurovAS/telegram-ToDo/blob/master/img/bell.svg) - напоминания</p></a>
+    <a><p>![Image text](https://github.com/KizurovAS/telegram-ToDo/blob/master/img/cog.svg) - настройки</p></a>
+    <a><p>![Image text](https://github.com/KizurovAS/telegram-ToDo/blob/master/img/plus-circle.svg) - добавить</p></a>
+    <a><p>![Image text](https://github.com/KizurovAS/telegram-ToDo/blob/master/img/pencil.svg) - редактировать</p></a>
+    <a><p>![Image text](https://github.com/KizurovAS/telegram-ToDo/blob/master/img/trash.svg) - удалить</p></a>
+    <a><p>![Image text](https://github.com/KizurovAS/telegram-ToDo/blob/master/img/check.svg) - да</p></a>
+    <a><p>![Image text](https://github.com/KizurovAS/telegram-ToDo/blob/master/img/close.svg) - нет</p></a>
     
   </a>
 
