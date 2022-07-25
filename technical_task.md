@@ -62,7 +62,7 @@
 При удалении просит подтвердить удаление напоминания. <br>
 При отложении выводит кнопочное меню: 10 минут; 30 минут; 1 час без подтверждения сохранения изменений. </p>
   <p><b> Иконки </b></p>
-    <a><p> ![Image text](https://github.com/KizurovAS/telegram-ToDo/blob/master/img/home.svg) - домой </p></a>
+    <p> ![Image text](https://github.com/KizurovAS/telegram-ToDo/blob/master/img/home.svg) - домой </p>
     <a><p> ![Image text](https://github.com/KizurovAS/telegram-ToDo/blob/master/img/help.svg) - справка </p></a>
     <a><p> ![Image text](https://github.com/KizurovAS/telegram-ToDo/blob/master/img/info.svg) - информация </p></a>
     <a><p> ![Image text](https://github.com/KizurovAS/telegram-ToDo/blob/master/img/document.svg) - заметки </p></a>
