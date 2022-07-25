@@ -6,18 +6,6 @@
 возможности версии лежат по адресу <a href="https://github.com/KizurovAS/telegram-ToDo/blob/master/versions.txt">/versions.txt</a>
 <p>
 ```mermaid
-  sequenceDiagram
-    participant V as Ваня
-    participant P as Петя
-    participant I as Ирина
-
-    autonumber
-    par Ваня и Петя
-        V->>P: Привет, Петя
-    and Ваня и Ирина 
-        V->>I: Привет, Ирина
-    end
-    loop Каждые полчаса
-        V->>I: Сколько времени?
-    end
+flowchart TB
+	node
 ```
