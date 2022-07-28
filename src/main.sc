@@ -63,8 +63,21 @@ theme: /
             go!: /Home
         
         state: Docs
-            a: Раздел еще не готов
-            go!: /Home
+            a: Надо сделать вывод всех данных
+            script:
+                $response.data = $response.data || [];
+                $response.data.push("1");
+                $response.data.push("2");
+                $response.data.push("3");
+            a: Заметка {{$response.data[0]}}
+            a: Заметка {{$response.data[1]}}
+            buttons:
+                "Домой" -> /Home
+                "Справка" -> /Home/Help
+                "Информация" -> /Home/Info
+                "Показать все"
+                "Добавить"
+            # go!: /Home
         
         state: Bell
             a: Раздел еще не готов
