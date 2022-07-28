@@ -65,12 +65,20 @@ theme: /
         state: Docs
             a: Надо сделать вывод всех данных
             script:
+                # var data=true;
                 $response.data = $response.data || [];
                 $response.data.push("1");
                 $response.data.push("2");
                 $response.data.push("3");
+                $temp.data=$response.data.length;
+              
+                $response.out="";
+                for (var i = 0; i < $temp.data; i++) {
+                    
+                    }
             a: Заметка {{$response.data[0]}}
-            a: Заметка {{$response.data[1]}}
+            a: Заметка {{$temp.data}}
+            a: Итог {{$response.out}}
             buttons:
                 "Домой" -> /Home
                 "Справка" -> /Home/Help
