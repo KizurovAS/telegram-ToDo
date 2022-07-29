@@ -7,7 +7,6 @@ theme: /
         script:
             $client.docs = $client.docs || [];
             $client.bells = $client.bells || [];
-        
         a: Привет, я помогу тебе сохранить заметки и напомнить о важных событиях.
         a: Введите текст для создания заметки.
         go!: /Home
@@ -17,7 +16,7 @@ theme: /
         script:
             if ($client.docs.length==0)
                 $client.docs.push("0");
-             if ($client.bells.length==0)
+            if ($client.bells.length==0)
                 $client.bells.push("0");
         buttons:
             "Настройки" -> /Home/Setup
@@ -86,17 +85,32 @@ theme: /
                 "Добавить" -> /Home/Docs/AddDoc
             
             state: SendAllDocs
-                # script:
-                #     $temp.i=$temp.i||[]
-                #     if (!$temp.i.length)
-                #         $temp.i=0;
-                # if: $temp.i<=$temp.docs
+                script:
+                    $temp.i=$temp.i||[]
+                    if (!$temp.i.length)
+                       $temp.i=0;
+                    while ($temp.i < $client.docs.length)
+                        $temp.i+=1;
+                        $response.replies = $response.replies || [];
+                        $response.replies.push({
+                        type: "image",
+                        imageUrl: 
+                        "https://cdnstatic.rg.ru/uploads/images/220/74/10/[Bez_imeni].jpg",
+                        text: "Самолет"
+                        });
+                # if: $temp.i < $client.docs.length
+                #     script:
+                #         $temp.i+=1;
+                a: {{$temp.i}}
+                a: {{$client.docs.length}}
+                    
                 #     script:
                 #         $temp.i+=1;
                 #     a: {{client.dogs[$temp.i]}}
                 # a: Заметка {{$client.docs[1]}}
                 # a: Заметка {{$client.docs[2]}}
-                # a: Итог {{$client.docs[3]}}    
+                # a: Итог {{$client.docs[3]}}
+                go!: /Home/Docs
             
             state: DeleteAllDocs
                 a: Удалить все заметки?
