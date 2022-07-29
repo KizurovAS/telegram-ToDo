@@ -3,6 +3,54 @@
         <q>/start</q>
         <a>Привет, я помогу тебе сохранить заметки и напомнить о важных событиях.</a>
         <a>Введите текст для создания заметки.</a>
-        <a state="/Home"/>
+        <!--<a state="/Home"/>-->
     </test-case>
+    
+     <test-case id="В настройки и домой">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <!--<a state="/Home"/>-->
+        <q>Настройки</q>
+        <a state="/Home/Setup"/>
+        <a state="/Home/Setup"/>
+        <a state="/Home/Setup"/>
+        <q>Домой</q>
+        <!--<a state="/Home"/>-->
+    </test-case>
+    
+    <test-case id="В справку">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <!--<a state="/Home"/>-->
+        <q>Справка</q>
+        <a state="/Home/Help"/>
+        <!--<a state="/Home"/>-->
+    </test-case>
+   
+    <test-case id="В информацию">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <!--<a state="/Home"/>-->
+        <q>Информация</q>
+        <a state="/Home/Info"/>
+        <!--<a state="/Home"/>-->
+    </test-case>
+    
+    <test-case id="В заметки и домой">
+        <q>/start</q>
+        <a state="/Start"/>
+        <a state="/Start"/>
+        <!--<a state="/Home"/>-->
+        <q>Заметки</q>
+        <a state="/Home/Docs"/>
+        <a state="/Home/Docs"/>
+        <a state="/Home/Docs"/>
+        <a state="/Home/Docs"/>
+        <q>Домой</q>
+        <!--<a state="/Home"/>-->
+    </test-case>
+   
 </test>

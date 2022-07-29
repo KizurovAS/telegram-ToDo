@@ -1,11 +1,5 @@
 <test>
-    <test-case id="Начальное приветствие">
-        <q>/start</q>
-        <a>Привет, я помогу тебе сохранить заметки и напомнить о важных событиях.</a>
-        <a>Введите текст для создания заметки.</a>
-        <a state="/Home"/>
-    </test-case>
-
+    
     <test-case id="Переход в настройки">
         <q>/start</q>
         <a state="/Start"/>
@@ -15,19 +9,6 @@
         <a>язык интерфейса - русский</a>
         <a>шрифт - стандартный</a>
         <a>оформление - текстовые кнопки</a>
-    </test-case>
-    
-    <test-case id="Возврат из настроек домой">
-        <q>/start</q>
-        <a state="/Start"/>
-        <a state="/Start"/>
-        <a state="/Home"/>
-        <q>Настройки</q>
-        <a state="/Home/Setup"/>
-        <a state="/Home/Setup"/>
-        <a state="/Home/Setup"/>
-        <q>Домой</q>
-        <a state="/Home"/>
     </test-case>
     
     <test-case id="Настройки языка">
