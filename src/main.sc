@@ -86,30 +86,19 @@ theme: /
             
             state: SendAllDocs
                 script:
+                    $response.replies = $response.replies || [];
                     $temp.i=$temp.i||[]
                     if (!$temp.i.length)
                        $temp.i=0;
-                    while ($temp.i < $client.docs.length)
-                        $temp.i+=1;
-                        $response.replies = $response.replies || [];
-                        $response.replies.push({
-                        type: "image",
-                        imageUrl: 
-                        "https://cdnstatic.rg.ru/uploads/images/220/74/10/[Bez_imeni].jpg",
-                        text: "Самолет"
-                        });
-                # if: $temp.i < $client.docs.length
-                #     script:
-                #         $temp.i+=1;
-                a: {{$temp.i}}
-                a: {{$client.docs.length}}
-                    
-                #     script:
-                #         $temp.i+=1;
-                #     a: {{client.dogs[$temp.i]}}
-                # a: Заметка {{$client.docs[1]}}
-                # a: Заметка {{$client.docs[2]}}
-                # a: Итог {{$client.docs[3]}}
+                    while ($temp.i < $client.docs.length-1)
+                        {$temp.i+=1;
+                        $response.replies.push( {
+                        type: "text",
+                        text: $client.docs[$temp.i],
+                        } )
+                        }
+                if: $temp.i==0
+                    a: Нет заметок.
                 go!: /Home/Docs
             
             state: DeleteAllDocs
