@@ -4,7 +4,9 @@ theme: /
 
     state: Start
         q!: $regex</start>
-        # a: Начнём.
+        script:
+            $client.docs = $client.docs || [];
+            $client.bells = $client.bells || [];
         a: Привет, я помогу тебе сохранить заметки и напомнить о важных событиях.
         a: Введите текст для создания заметки.
         go!: /Home
