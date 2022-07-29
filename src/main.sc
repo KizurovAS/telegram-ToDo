@@ -62,7 +62,11 @@ theme: /
             go!: /Home
         
         state: Info
-            a: Раздел еще не готов
+            script: 
+                $temp.docs=$client.docs.length;
+                $temp.bells=$client.bells.length;
+                $temp.answer="Заметок: "+$temp.docs+". \n Напоминаний: "+$temp.bells+".";
+            a: {{$temp.answer}}
             go!: /Home
         
         state: Docs
@@ -99,7 +103,10 @@ theme: /
 
     state: NoMatch
         event!: noMatch
-        a: Я не понял. Вы сказали: {{$request.query}}
+        script:
+            $client.docs.push($request.query);
+        a: Добавил в заметку: {{$request.query}}
+        go!: /Home
 
     state: Match
         event!: match
