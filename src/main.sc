@@ -70,12 +70,7 @@ theme: /
                 $response.data.push("1");
                 $response.data.push("2");
                 $response.data.push("3");
-                $temp.data=$response.data.length;
-              
-                $response.out="";
-                for (var i = 0; i < $temp.data; i++) {
-                    
-                    }
+                
             a: Заметка {{$response.data[0]}}
             a: Заметка {{$temp.data}}
             a: Итог {{$response.out}}
@@ -83,7 +78,7 @@ theme: /
                 "Домой" -> /Home
                 "Справка" -> /Home/Help
                 "Информация" -> /Home/Info
-                "Показать все"
+                "Показать все" 
                 "Добавить"
             # go!: /Home
         
