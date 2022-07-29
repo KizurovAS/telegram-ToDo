@@ -10,6 +10,7 @@ theme: /
         go!: /Home
         
     state: Home
+        a: 
         buttons:
             "Настройки" -> /Home/Setup
             "Справка" -> /Home/Help
