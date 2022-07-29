@@ -86,9 +86,17 @@ theme: /
                 "Добавить" -> /Home/Docs/AddDoc
             
             state: SendAllDocs
-                a: Заметка {{$client.docs[1]}}
-                a: Заметка {{$client.docs[2]}}
-                a: Итог {{$client.docs[3]}}    
+                # script:
+                #     $temp.i=$temp.i||[]
+                #     if (!$temp.i.length)
+                #         $temp.i=0;
+                # if: $temp.i<=$temp.docs
+                #     script:
+                #         $temp.i+=1;
+                #     a: {{client.dogs[$temp.i]}}
+                # a: Заметка {{$client.docs[1]}}
+                # a: Заметка {{$client.docs[2]}}
+                # a: Итог {{$client.docs[3]}}    
             
             state: DeleteAllDocs
                 a: Удалить все заметки?
