@@ -101,7 +101,11 @@ theme: /
                         
                 if: $temp.i==0
                     a: Нет заметок.
-                go!: /Home/Docs
+                go!: /Home/Docs/SendAllDocs/EditDoc
+                
+                state: EditDoc
+                    a: Выбрать заметку
+                    
             
             state: DeleteAllDocs
                 a: Удалить все заметки?
