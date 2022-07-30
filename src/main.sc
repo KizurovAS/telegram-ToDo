@@ -94,9 +94,10 @@ theme: /
                         {$temp.i+=1;
                         $response.replies.push( {
                         type: "text",
-                        text: $client.docs[$temp.i],
+                        text: "/"+$temp.i+" "+$client.docs[$temp.i],
                         } )
                         }
+                        
                 if: $temp.i==0
                     a: Нет заметок.
                 go!: /Home/Docs
