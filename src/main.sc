@@ -96,17 +96,34 @@ theme: /
                         $response.replies.push( {
                         type: "text",
                         text: "/"+$temp.i+" "+$client.docs[$temp.i],
+                        // text: $client.docsPos[$temp.i]+$client.docs[$temp.i],
                         } )
                         }
                         
                 if: $temp.i==0
                     a: Нет заметок.
-                go!: /Home/Docs/SendAllDocs/EditDoc
+                    go!: /Home/Docs/
+                else:
+                    a: Выберете заметку.
+                    buttons:
+                        "Домой" -> /Home
+                        "Справка" -> /Home/Help
+                        "Информация" -> /Home/Info
+                        "Показать все" -> /Home/Docs/SendAllDocs
+                        "Удалить все" -> /Home/Docs/DeleteAllDocs
+                        "Добавить" -> /Home/Docs/AddDoc
+            
+                    # go!: /Home/Docs/SendAllDocs/EditDoc
                 
                 state: EditDoc
-                    a: Выбрать заметку
+                    q: *
+                    if: $request.query[0]!="/"
+                        go!: /Home/Docs/AddDoc
+                    a: тут парсим
+                    script:
+                            
                     
-            
+                    
             state: DeleteAllDocs
                 a: Удалить все заметки?
                 buttons:
@@ -130,6 +147,7 @@ theme: /
                 else:
                     script:
                         $client.docs.push($request.query);
+                        
                     a: Добавил в заметку: {{$request.query}}
                 go!: /Home
                 
