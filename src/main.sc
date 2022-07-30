@@ -12,7 +12,7 @@ theme: /
         go!: /Home
         
     state: Home
-        # a: 
+        a: Главное меню 
         script:
             if ($client.docs.length==0)
                 $client.docs.push("0");
