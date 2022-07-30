@@ -85,6 +85,7 @@ theme: /
                 "Добавить" -> /Home/Docs/AddDoc
             
             state: SendAllDocs
+                a: Список заметок:
                 script:
                     $response.replies = $response.replies || [];
                     $temp.i=$temp.i||[]
