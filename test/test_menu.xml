@@ -45,7 +45,7 @@
         <a state="/Start"/>
         <!--<a state="/Home"/>-->
         <q>Заметки</q>
-        <!--<a state="/Home/Docs"/>-->
+        <a state="/Home/Docs"/>
         <!--<a state="/Home/Docs"/>-->
         <!--<a state="/Home/Docs"/>-->
         <!--<a state="/Home/Docs"/>-->

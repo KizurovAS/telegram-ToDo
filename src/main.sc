@@ -75,7 +75,7 @@ theme: /
             go!: /Home
         
         state: Docs
-            
+            a: Меню заметок
             buttons:
                 "Домой" -> /Home
                 "Справка" -> /Home/Help
