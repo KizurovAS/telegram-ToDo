@@ -23,7 +23,7 @@ theme: /
             "Справка" -> /Home/Help
             "Информация" -> /Home/Info
             "Заметки" -> /Home/Docs
-            "Напоминания" -> /Home/Bell
+            # "Напоминания" -> /Home/Bell
 
         state: Setup
             a: язык интерфейса - русский
@@ -31,7 +31,7 @@ theme: /
             a: оформление - текстовые кнопки
             buttons:
                 "Домой" -> /Home
-                "Справка"
+                # "Справка"
                 "Язык" -> /Home/Setup/LanguageSetup
                 "Шрифт" -> /Home/Setup/FontSetup
                 "Оформление" -> /Home/Setup/DecorSetup
@@ -63,7 +63,10 @@ theme: /
                     "Значки" -> /Home/Setup
         
         state: Help
-            a: Раздел еще не готов
+            a: Создать заметку можно двумя способами: отправить сообщение с текстом заметки; нажать кнопку добавить, а затем ввести текст заметки.
+            a: Изменить ключевые настройки можно в пункте "Настройки" (сейчас настройки изменить невозможно).
+            a: Для просмотра заметок нажмите соответствующую кнопку меню.
+            a: После вывода заметок по клику на ссылку заметки можно перейти в окно удаления или изменения заметки.
             go!: /Home
         
         state: Info
@@ -96,7 +99,6 @@ theme: /
                         $response.replies.push( {
                         type: "text",
                         text: "/"+$temp.i+" "+$client.docs[$temp.i],
-                        // text: $client.docsPos[$temp.i]+$client.docs[$temp.i],
                         } )
                         }
                         
@@ -113,8 +115,6 @@ theme: /
                         "Удалить все" -> /Home/Docs/DeleteAllDocs
                         "Добавить" -> /Home/Docs/AddDoc
             
-                    # go!: /Home/Docs/SendAllDocs/EditDoc
-                
                 state: EditDoc
                     q: *
                     if: $request.query[0]!="/"
@@ -155,14 +155,6 @@ theme: /
             a: Раздел еще не готов
             go!: /Home
             
-    # state: Hello
-    #     intent!: /привет
-    #     a: Привет привет
-
-    # state: Bye
-    #     intent!: /пока
-    #     a: Пока пока
-
     state: NoMatch
         event!: noMatch
         go!: /Home/Docs/AddDoc
