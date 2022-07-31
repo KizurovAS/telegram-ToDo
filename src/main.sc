@@ -73,7 +73,7 @@ theme: /
         state: Info
             script: 
                 $temp.docs=$client.docs.length-1;
-                $temp.bells=$client.bells.length-1;
+                # $temp.bells=$client.bells.length-1;
                 # $temp.answer="Заметок: "+$temp.docs+". \n Напоминаний: "+$temp.bells+".";
                 $temp.answer="Заметок: "+$temp.docs+".";
             a: {{$temp.answer}}

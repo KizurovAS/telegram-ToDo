@@ -1,7 +1,7 @@
 <test>
     <test-case id="Начальное приветствие">
         <q>/start</q>
-        <a state="Start"/>
+        <a state="/Start"/>
         <a>Введите текст для создания заметки.</a>
         <a state="/Home"/>
     </test-case>
