@@ -5,7 +5,7 @@
 <p>
 возможности версии лежат по адресу <a href="https://github.com/KizurovAS/telegram-ToDo/blob/master/versions.txt">/versions.txt</a>
 <p>
-бот опубликован в телеграмме по адресу <a href="t.me/KAS_ToDo_bot">KAS_ToDo</a>
+бот опубликован в телеграмме по адресу <a href="http://t.me/KAS_ToDo_bot">KAS_ToDo</a>
 <p>
 
 ```mermaid
