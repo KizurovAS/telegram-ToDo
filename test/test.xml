@@ -1,26 +1,18 @@
 <test>
     
-    <test-case id="Переход в настройки">
-        <q>/start</q>
-        <a state="/Start"/>
-        <a state="/Start"/>
-        <a state="/Home"/>
-        <q>Настройки</q>
-        <a>язык интерфейса - русский</a>
-        <a>шрифт - стандартный</a>
-        <a>оформление - текстовые кнопки</a>
-    </test-case>
+    <test-case id="Удаление всех заметок">
+    </test-case>    
     
-    <test-case id="Настройки языка">
-        <q>/start</q>
-        <a state="/Start"/>
-        <a state="/Start"/>
-        <a state="/Home"/>
-        <q>Настройки</q>
-        <a state="/Home/Setup"/>
-        <a state="/Home/Setup"/>
-        <a state="/Home/Setup"/>
-        <q>Язык</q>
-        <a state="/Home/Setup/LanguageSetup"/>
-    </test-case>
+    <test-case id="Добавление 4х заметок">
+    </test-case>    
+    
+    <test-case id="Изменение заметки">
+    </test-case>    
+    
+    <test-case id="Удаление заметки">
+    </test-case>    
+    
+    <test-case id="">
+    </test-case>    
+
 </test>    
