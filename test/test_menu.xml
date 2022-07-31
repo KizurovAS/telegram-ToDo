@@ -26,6 +26,9 @@
         <a state="/Home"/>
         <q>Справка</q>
         <a state="/Home/Help"/>
+        <a state="/Home/Help"/>
+        <a state="/Home/Help"/>
+        <a state="/Home/Help"/>
         <a state="/Home"/>
     </test-case>
    

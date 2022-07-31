@@ -16,8 +16,8 @@ theme: /
         script:
             if ($client.docs.length==0)
                 $client.docs.push("0");
-            if ($client.bells.length==0)
-                $client.bells.push("0");
+            # if ($client.bells.length==0)
+            #     $client.bells.push("0");
         buttons:
             "Настройки" -> /Home/Setup
             "Справка" -> /Home/Help
@@ -73,7 +73,8 @@ theme: /
             script: 
                 $temp.docs=$client.docs.length-1;
                 $temp.bells=$client.bells.length-1;
-                $temp.answer="Заметок: "+$temp.docs+". \n Напоминаний: "+$temp.bells+".";
+                # $temp.answer="Заметок: "+$temp.docs+". \n Напоминаний: "+$temp.bells+".";
+                $temp.answer="Заметок: "+$temp.docs+".";
             a: {{$temp.answer}}
             go!: /Home
         
@@ -151,9 +152,9 @@ theme: /
                     a: Добавил в заметку: {{$request.query}}
                     go!: /Home
                 
-        state: Bell
-            a: Раздел еще не готов
-            go!: /Home
+        # state: Bell
+        #     a: Раздел еще не готов
+        #     go!: /Home
             
     state: NoMatch
         event!: noMatch
