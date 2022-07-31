@@ -17,6 +17,8 @@ theme: /
         script:
             if ($client.docs.length==0)
                 $client.docs.push("0");
+            if ($client.pos.length==0)
+                $client.pos.push("/0");
             # if ($client.bells.length==0)
             #     $client.bells.push("0");
         buttons:
@@ -100,10 +102,10 @@ theme: /
                         {$temp.i+=1;
                         $response.replies.push( {
                         type: "text",
-                        text: "/"+$temp.i+" "+$client.docs[$temp.i],
-                        } )
+                        text: $client.pos[$temp.i]+" "+$client.docs[$temp.i],
+                            } )
                         }
-                        
+                    
                 if: $temp.i==0
                     a: Нет заметок.
                     go!: /Home/Docs/
@@ -121,10 +123,64 @@ theme: /
                     q: *
                     if: $request.query[0]!="/"
                         go!: /Home/Docs/AddDoc
-                    a: тут парсим
                     script:
-                            
+                        $response.replies = $response.replies || [];
+                        $temp.i=0;
+                        $session.j=0;
+                        while ($temp.i < $client.docs.length-1)
+                            {$temp.i+=1;
+                            if ($request.query==$client.pos[$temp.i]) {
+                                $session.j=$temp.i;
+                                }
+                            }            
+                    if: $session.j!=0
+                        a: {{$client.docs[$session.j]}}
+                    else:
+                        a: заметка не найдена
+                        go!: /Home
+                    buttons:
+                        "Домой" -> /Home
+                        "Показать все" -> /Home/Docs/SendAllDocs
+                        "Изменить эту заметку" -> /Home/Docs/SendAllDocs/EditDoc/EditThisDoc
+                        "Удалить эту заметку" -> /Home/Docs/DeleteThisDoc
                     
+                    state: EditThisDoc
+                        if: $request.query=="Изменить эту заметку"
+                            a: Введите новый текст заметки
+                            script:
+                                $session.flug="EditDoc";
+        
+            state: DeleteThisDoc
+                a: Вы действительно хотите удалить эту заметку?
+                buttons:
+                    "Да"
+                    "Нет"
+                state:
+                    q: (нет/отмена/неверно/не верно/не надо/ненадо)
+                    go!: /Home
+                state:
+                    q: (да/верно/удалить)
+                    script:
+                        var docs=[];
+                        var pos=[];
+                        var esc=$session.j;
+                        var vol=$client.docs.length
+                        $temp.k=0;
+                        while ($temp.k<vol) 
+                            {
+                            if ($temp.k!=esc) {
+                                docs.push($client.docs[$temp.k]);
+                                pos.push("/"+(docs.length-1));
+                                }
+                            $temp.k+=1;
+                            }
+                        delete $client.docs;
+                        $client.docs=docs;
+                        delete $client.pos;
+                        $client.pos=pos;
+                    a: Заметка удалена.
+                    go!: /Home
+            
                     
             state: DeleteAllDocs
                 a: Удалить все заметки?
@@ -136,6 +192,8 @@ theme: /
                     script:
                         delete $client.docs;
                         $client.docs=$client.docs||[];
+                        delete $client.pos;
+                        $client.pos=$client.pos||[];
                     a: все заметки удалены.
                     go!: /Home
                     
@@ -146,11 +204,31 @@ theme: /
             state: AddDoc
                 if: $request.query=="Добавить"
                     a: Введите текст заметки.
-                else:
+                elseif: $session.flug!="EditDoc"
                     script:
                         $client.docs.push($request.query);
-                        
+                        $client.pos.push("/"+($client.docs.length-1));
                     a: Добавил в заметку: {{$request.query}}
+                    go!: /Home
+                elseif: $session.flug=="EditDoc"
+                    script:
+                        delete $session.flug;
+                        $session.buf=$request.query;
+                    a: Сохранить новую заметку: {{$request.query}}
+                    buttons:
+                        "Отмена" -> /Home/Docs/AddDoc/Cansel
+                        "Сохранить" -> /Home/Docs/AddDoc/Save
+                    
+                state: Cansel
+                    q: Отмена
+                    a: Изменения отменены
+                    go!: /Home
+                    
+                state: Save
+                    q: Сохранить
+                    a: Изменения сохранены
+                    script:
+                        $client.docs[$session.j]=$session.buf;
                     go!: /Home
                 
         # state: Bell
