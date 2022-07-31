@@ -149,7 +149,7 @@ theme: /
                         $client.docs.push($request.query);
                         
                     a: Добавил в заметку: {{$request.query}}
-                go!: /Home
+                    go!: /Home
                 
         state: Bell
             a: Раздел еще не готов
