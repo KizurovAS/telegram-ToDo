@@ -82,14 +82,15 @@ theme: /
             go!: /Home
         
         state: Docs
-            a: Меню заметок
-            buttons:
-                "Домой" -> /Home
-                "Справка" -> /Home/Help
-                "Информация" -> /Home/Info
-                "Показать все" -> /Home/Docs/SendAllDocs
-                "Удалить все" -> /Home/Docs/DeleteAllDocs
-                "Добавить" -> /Home/Docs/AddDoc
+            go!: SendAllDocs
+            # a: Меню заметок
+            # buttons:
+            #     "Домой" -> /Home
+            #     "Справка" -> /Home/Help
+            #     "Информация" -> /Home/Info
+            #     "Показать все" -> /Home/Docs/SendAllDocs
+            #     "Удалить все" -> /Home/Docs/DeleteAllDocs
+            #     "Добавить" -> /Home/Docs/AddDoc
             
             state: SendAllDocs
                 a: Список заметок:
@@ -115,7 +116,7 @@ theme: /
                         "Домой" -> /Home
                         "Справка" -> /Home/Help
                         "Информация" -> /Home/Info
-                        "Показать все" -> /Home/Docs/SendAllDocs
+                        # "Показать все" -> /Home/Docs/SendAllDocs
                         "Удалить все" -> /Home/Docs/DeleteAllDocs
                         "Добавить" -> /Home/Docs/AddDoc
             

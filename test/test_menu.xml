@@ -42,18 +42,18 @@
         <a state="/Home"/>
     </test-case>
     
-    <test-case id="В заметки и домой">
-        <q>/start</q>
-        <a state="/Start"/>
-        <a state="/Start"/>
-        <a state="/Home"/>
-        <q>Заметки</q>
-        <a state="/Home/Docs"/>
+    <!--<test-case id="В заметки и домой">-->
+    <!--    <q>/start</q>-->
+    <!--    <a state="/Start"/>-->
+    <!--    <a state="/Start"/>-->
+    <!--    <a state="/Home"/>-->
+    <!--    <q>Заметки</q>-->
+    <!--    <a state="/Home/Docs"/>-->
         <!--<a state="/Home/Docs"/>-->
         <!--<a state="/Home/Docs"/>-->
         <!--<a state="/Home/Docs"/>-->
-        <q>Домой</q>
-        <a state="/Home"/>
-    </test-case>
+    <!--    <q>Домой</q>-->
+    <!--    <a state="/Home"/>-->
+    <!--</test-case>-->
    
 </test>
